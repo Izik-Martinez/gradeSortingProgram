@@ -25,14 +25,15 @@ grade: Number(prompt("type grade here"))
 
 
 
-console.log(allGrades);
+// console.log(allGrades);
 
 }
 
-console.log(decider);
+// console.log(decider);
 
 const passingGrades = allGrades.filter(n=>n.grade > 65).map(n=>n.grade);
-console.log(passingGrades);
+const failingGrades = allGrades.filter(n=>n.grade < 65).map(n=>n.grade);
+// console.log(passingGrades);
 
 // allGrades.forEach(element => {
 //     element.name === "quit"
