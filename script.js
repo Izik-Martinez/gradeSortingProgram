@@ -1,15 +1,16 @@
 let allGrades = [];
 
 
-let decider = prompt("type 'new grade' or 'quit'")
+let decider = "filler";
+// prompt("type 'new grade' or 'quit'")
 
 
 
 while(decider !== "quit"){
 
+decider = prompt("type 'new' or 'quit'")
 
-
-if (decider === "new grade"){
+if (decider === "new"){
 
 allGrades.push({
 
@@ -18,11 +19,6 @@ grade: Number(prompt("type grade here"))
 
 })
 
-allGrades.forEach(element => {
-    if (element.name === "quit"){
-        let decider = "quit"
-    }
-});
 
 }
 
@@ -32,3 +28,15 @@ allGrades.forEach(element => {
 console.log(allGrades);
 
 }
+
+console.log(decider);
+
+const passingGrades = allGrades.filter(n=>n.grade > 65).map(n=>n.grade);
+console.log(passingGrades);
+
+// allGrades.forEach(element => {
+//     element.name === "quit"
+//         let decider = "quit"
+//         console.log(decider);
+//     }
+// });
